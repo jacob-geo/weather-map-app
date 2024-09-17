@@ -45,17 +45,17 @@
 </script>
 
 <div
-  class="toast absolute -top-full left-1/2 -translate-x-1/2 bg-black z-[9999] rounded-full flex items-center gap-2 p-2 text-white"
+  class="toast fixed -top-full left-1/2 -translate-x-1/2 bg-black z-[9999] rounded-full flex items-center gap-2 p-2 text-white"
 >
   <!-- toast icon -->
   <div
-    class=" w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center"
+    class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full "
   >
     {ToastTypeIconMap[type]}
   </div>
 
   <!-- toast text content -->
-  <p class="toast-text hidden">
+  <p class="hidden toast-text">
     <slot />
   </p>
 </div>
