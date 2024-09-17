@@ -4,11 +4,13 @@
   import { gsap } from "gsap";
   import { onMount } from "svelte";
 
+  import { IconPlus } from "@tabler/icons-svelte";
+
   onMount(() => {
     // gsap.to();
   });
 
-  let isMenuOpen = true;
+  let isMenuOpen = false;
 
   function toggleMenu() {
     if (isMenuOpen) {
@@ -48,7 +50,8 @@
 
   <button
     on:click={toggleMenu}
-    class="menu-button bg-black w-16 h-16 rounded-full flex items-center justify-center leading-none text-white text-4xl"
-    >+
+    class="flex items-center justify-center w-16 h-16 text-4xl leading-none text-white bg-black rounded-full menu-button"
+  >
+    <IconPlus />
   </button>
 </div>
