@@ -7,7 +7,16 @@
   onMount(async () => {
     const leaflet = await import("leaflet");
 
-    map = leaflet.map(mapElement).setView([51.505, -0.09], 13);
+    map = leaflet
+      .map(mapElement, { zoomControl: false })
+      .setView([51.505, -0.09], 13);
+
+    // Add zoom control after removing it before
+    leaflet.control
+      .zoom({
+        position: "bottomright",
+      })
+      .addTo(map);
 
     leaflet
       .tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -16,11 +25,15 @@
       })
       .addTo(map);
 
+    leaflet.tileLayer
+      .wms("https://a.tile.opentopomap.org/{z}/{x}/{y}.png")
+      .addTo(map);
+
     leaflet
       .marker([51.5, -0.09])
       .addTo(map)
-      .bindPopup("A pretty CSS3 popup.<br> Easily customizable.")
-      .openPopup();
+      .bindPopup("<input type='text' placeholder='test popup'>");
+    // .openPopup();
   });
 
   onDestroy(async () => {
