@@ -23,7 +23,7 @@
     } else {
       gsap.to(".menu-button", {
         duration: 0.3,
-        rotate: 145,
+        rotate: 135,
         ease: "power2.inOut",
       });
       isMenuOpen = true;
@@ -50,7 +50,7 @@
 
   <button
     on:click={toggleMenu}
-    class="flex items-center justify-center w-16 h-16 text-4xl leading-none text-white bg-black rounded-full menu-button"
+    class="flex items-center justify-center w-16 h-16 text-4xl text-white bg-black rounded-full menu-button"
   >
     <IconPlus />
   </button>

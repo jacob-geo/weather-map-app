@@ -19,7 +19,7 @@
       </a>
     </li>
     <li class="p-4">
-      <a href="/info">
+      <a href="/settings">
         <IconSettings />
       </a>
     </li>
