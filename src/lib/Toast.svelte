@@ -18,24 +18,24 @@
   onMount(() => {
     let tl = gsap.timeline();
     tl.from(".toast", {
-      duration: 0.3,
+      duration: 0.1,
       width: "3rem",
       height: "3rem",
     })
       .to(".toast", {
-        duration: 0.3,
+        duration: 0.2,
         top: "1rem",
-        ease: "power2.inOut",
+        ease: "power2.out",
       })
       .to(".toast", {
-        duration: 0.5,
-        delay: 0.3,
+        duration: 0.3,
+        delay: 0.2,
         width: "60vw",
-        ease: "power2.inOut",
+        ease: "power2.out",
       })
       .to(".toast-text", {
         display: "block",
-        delay: 0.2,
+        delay: 0.1,
       });
 
     setTimeout(() => {
@@ -49,7 +49,7 @@
 >
   <!-- toast icon -->
   <div
-    class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full "
+    class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full"
   >
     {ToastTypeIconMap[type]}
   </div>
